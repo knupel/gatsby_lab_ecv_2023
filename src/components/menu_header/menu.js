@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavCell } from "../goto";
+import { NavCell } from "../gui";
 
 const style_box = {
 	margin: "0 auto",
