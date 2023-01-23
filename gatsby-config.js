@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby_Lab`,
+    title: `Gatsby Lab ECV 2023`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [],
