@@ -3,6 +3,8 @@ import React from "react";
 import { NavCell } from "../gui";
 import tree from "./../../../media/tree.json";
 
+import { useStaticQuery, graphql } from "gatsby";
+
 const style_box = {
 	margin: "0 auto",
 	display: "flex",
@@ -10,6 +12,33 @@ const style_box = {
 	maxWidth: "600px",
 }
 
+function MenuMD() {
+	// GRAPHQL
+	const data = useStaticQuery(
+	graphql`
+		query {
+			allFile(filter: {sourceInstanceName: {eq: "markdown pages"}}) {
+				edges {
+					node {
+						childrenMarkdownRemark {
+							frontmatter {
+								slug
+								menu
+								title
+							}
+						}
+					}
+				}
+			}
+		}
+	`
+	)
+
+	const { allFile } = data;
+	const menu = [];
+
+	return <></>
+}
 
 
 export function Menu() {
