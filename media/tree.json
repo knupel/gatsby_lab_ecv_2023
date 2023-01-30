@@ -1,0 +1,24 @@
+{
+	"fr": {
+		"home": "accueil",
+		"main": "projet",
+		"contact": "contact",
+		"about": "à propos",
+		"other": "journal",
+		"lang" : {
+			"fr": "français",
+			"en": "anglais"
+		}
+	},
+	"en": {
+		"home": "home",
+		"main": "project",
+		"contact": "contact",
+		"about": "about",
+		"other": "blog",
+		"lang" : {
+			"fr": "french",
+			"en": "english"
+		}
+	}
+}
