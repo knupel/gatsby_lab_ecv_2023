@@ -6,4 +6,13 @@
 	--color_3: magenta;
 	--color_4: cyan;
 	--color_5: red;
+	--color_6: purple;
+
+	/* the app settig */
+	--color_text: var(--color_2);
+	
+	--color_global: var(--color_2);
+	--color_header: var(--color_4);
+	--color_layout: var(--color_3);
+	--color_footer: var(--color_4);
 }
