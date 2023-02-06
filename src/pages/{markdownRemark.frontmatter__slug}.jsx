@@ -4,18 +4,19 @@ import { graphql } from "gatsby";
 import { Layout } from "./../components/struct/layout";
 
 
+function Contenu(props) {
+
+  const { frontmatter, html } = props.info;
+  return <>
+    BLABLA
+  </>
+
+}
+
 export default function Generic({data}) {
-	console.log("data", data);
-
   const { markdownRemark } = data;
-  // console.log("markdownRemark", markdownRemark);
-
-  const { frontmatter, html } = markdownRemark;
-  // console.log("frontmatter", frontmatter);
-  // console.log("html", html);
-
 	return <Layout>
-    {frontmatter.title}
+    <Contenu info={markdownRemark}/>
 	</Layout>
 }
 
