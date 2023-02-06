@@ -8,7 +8,8 @@ function Contenu(props) {
 
   const { frontmatter, html } = props.info;
   return <>
-    BLABLA
+    <h1>{frontmatter.title}</h1>
+    <div dangerouslySetInnerHTML={{__html: html}}></div>
   </>
 
 }

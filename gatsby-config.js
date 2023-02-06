@@ -17,6 +17,12 @@ module.exports = {
         path: `${__dirname}/media/markdown_pages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/media/images`,
+      },
+    },
     // Markdonw part
     {
       resolve : `gatsby-transformer-remark`,
