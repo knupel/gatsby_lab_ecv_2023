@@ -8,11 +8,11 @@ export default function Generic({data}) {
 	console.log("data", data);
 
   const { markdownRemark } = data;
-  console.log("markdownRemark", markdownRemark);
+  // console.log("markdownRemark", markdownRemark);
 
   const { frontmatter, html } = markdownRemark;
-  console.log("frontmatter", frontmatter);
-  console.log("html", html);
+  // console.log("frontmatter", frontmatter);
+  // console.log("html", html);
 
 	return <Layout>
     {frontmatter.title}

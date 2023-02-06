@@ -24,7 +24,6 @@ function MenuMD() {
 							frontmatter {
 								slug
 								menu
-								title
 							}
 						}
 					}
@@ -35,9 +34,22 @@ function MenuMD() {
 	)
 
 	const { allFile } = data;
+	// console.log("allFile.length", allFile.edges.length);
 	const menu = [];
+	for(let i = 0 ; i <  allFile.edges.length ; i++) {
+		let buffer = allFile.edges[i].node.childrenMarkdownRemark[0].frontmatter;
+		console.log(buffer);
+		menu.push(buffer);
+	}
+	console.log("menu.length",menu.length)
 
-	return <></>
+
+
+	return <>
+	{menu.map((elem, key) => (
+		<NavCell to={elem.slug}>{elem.menu}</NavCell>
+	))}
+	</>
 }
 
 
@@ -47,6 +59,7 @@ export function Menu() {
 		<NavCell to="/pagea">{tree.fr.main}</NavCell>
 		<NavCell to="/pageb">{tree.fr.about}</NavCell>
 		<NavCell to="/pagec">{tree.fr.contact}</NavCell>
+		<MenuMD/>
 		</div>
 	)
 }
