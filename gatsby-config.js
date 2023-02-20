@@ -1,6 +1,10 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require("dotenv").config();
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Lab ECV 2023`,
@@ -9,7 +13,16 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    
+    // FONT
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: process.env.TYPEKIT_ID,
+        },
+      },
+    },
+    // FILE SYSTEM
     {
       resolve: `gatsby-source-filesystem`,
       options: {
