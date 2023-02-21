@@ -6,7 +6,7 @@ import { graphql } from "gatsby";
 // Dans le cadre d'une page on peut utiliser le Query global
 
 export const PageB = ({data}) => {
-  console.log("data query global",data);
+  console.log("query global page B",data);
   return <Layout><h1>Projet B</h1></Layout>;
 };
 
