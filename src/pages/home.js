@@ -8,26 +8,10 @@ import { Layout } from "../components/struct/layout.js"
 // par contre dans le cadre d'un composant cela n'est pas possble donc ici
 // on utilise la fonction hook de gatsby pour l'appeler en local.
 
-export default function Home() {
-	const data = useStaticQuery (
-		graphql`query {
-			allMarkdownRemark(filter: { frontmatter: { menu: { eq: "accueil" } } }) {
-			  edges {
-					node {
-						frontmatter {
-						categorie
-						menu
-						lang
-						title
-						}
-						html
-					}
-					}
-				}
-		  }
-		`
-	)
-	console.log("data query local",data);
+// mais ici il y a encore une exception c'est que c'est une page appelée depuis l'index
+
+export default function Home({data}) {
+	console.log("data query from page index",data);
 	return <Layout>
 			<h1>Home</h1>
 	</Layout>
