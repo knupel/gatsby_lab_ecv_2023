@@ -8,10 +8,16 @@ import { Layout } from "../components/struct/layout.js"
 
 // ici c'est encore plus particulier car on doit passer par la page index pour recevoir la graphql ???
 
-export default function Home({data}) {
-	console.log("data query from index",data);
+// export default function Home({data}) {
+// 	console.log("data query from index",data);
+// 	return <Layout>
+// 		<h1>Home</h1>
+// 	</Layout>
+// }
+
+export default function Home() {
 	return <Layout>
-			<h1>Home</h1>
+		<h1>Home</h1>
 	</Layout>
 }
 

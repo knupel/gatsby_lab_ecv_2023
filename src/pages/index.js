@@ -5,9 +5,15 @@ import Home  from "./home.js"
 
 // Dans le cadre d'une page on peut utiliser le Query global
 
-const IndexPage = ({data}) => {
+// const IndexPage = ({data}) => {
+//   return (
+//     <Home data={data}/>
+//   )
+// }
+
+const IndexPage = () => {
   return (
-    <Home data={data}/>
+    <Home/>
   )
 }
 
