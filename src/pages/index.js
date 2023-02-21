@@ -1,7 +1,7 @@
 import * as React from "react"
 
 
-import { Home }  from "./home.js"
+import Home  from "./home.js"
 
 
 const IndexPage = () => {
